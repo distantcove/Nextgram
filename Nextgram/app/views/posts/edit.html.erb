@@ -1,0 +1,13 @@
+<!-- edit posts view -->
+
+<div class="text-center">
+  <%= image_tag @post.image.url(:medium) %>
+</div>
+
+<%= render 'form' %>
+
+<div class="text-center">
+  <%= link_to "Cancel", posts_path %>
+  |
+  <%= link_to "Delete", post_path(@post), method: :delete, data: {confirm: "Are you sure you want to delete this post?"} %>
+</div>
